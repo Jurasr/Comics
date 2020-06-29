@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeroesNVillains
 {
-    interface IHero
+    internal class Batman : IHero
     {
         double Height { get; set; }
         bool Gender { get; set; }
@@ -16,7 +16,7 @@ namespace HeroesNVillains
         void Info();
 
         void Fly();
-        
+
     }
 
     interface IVillain
@@ -26,10 +26,18 @@ namespace HeroesNVillains
         string Powers { get; set; }
 
         void Info();
+        public double Height { get; set; }
+        public bool Gender { get; set; }
+        public string Powers { get; set; }
 
+
+        public void Info()
+        {
+            Console.WriteLine("NA na na na na");
+        }
     }
 
-    class Batman : IHero
+    internal class Supemenrtas : IHero
     {
         public double Height { get; set; }
         public bool Gender { get; set; }
@@ -39,9 +47,9 @@ namespace HeroesNVillains
 
         public void Info()
         {
-
+            Console.WriteLine("Hallo");
         }
-        
+
         public bool Fly()
         {
             if (Wings > 1)
@@ -53,19 +61,20 @@ namespace HeroesNVillains
         }
     }
 
-    class Joker : IVillain
+    internal class Joker : IVillain
     {
         public double Height { get; set; }
         public bool Gender { get; set; }
         public string Powers { get; set; }
+
         public void Info()
         {
-
         }
     }
-    class Program
+
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
         }
     }
